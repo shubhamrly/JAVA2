@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+div{
+    margin:auto;
+    margin-top:20%;
+    width:19%;
+    height:10%;
+    align-self:center;
+
+}
+div{
+	background-color: red;
+	border-radius: 10px ;
+}
+
+</style>
+<script>
+function val()
+{
+	var UN = document.lf.un.value;
+	var PA = document.lf.pa.value;
+	var ref = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+	if(UN.length < 4)
+		{alert("Try again new username of 4 character long looser");
+		return false;
+		}
+	if(PA.length <  4)
+    {alert("Try again looser of larger password");
+    
+    return false;
+    }
+	
+	
+	return true;
+	}
+
+</script>
+<body>
+   <form name="lf" action="Pss"  method="get" >
+<div>
+Username: <input type="text" name="un" >
+<br>Password: <input type = "password" name = "pa" > <!--onclick="return val()"...-->
+ <br><p style=  "text-align : center;"><input type="submit" value ="submit" >
+</div>
+</form> 
+
+<!--
+<form name ="eq" action ="Pss" method = "post">
+<input type= "number" name = "a">x^2 + <input type = "text" name= "b">x + <input type="text" name="c">c
+<input type = "submit" value ="submit">
+</form>...-->
+</body>
+</html>
